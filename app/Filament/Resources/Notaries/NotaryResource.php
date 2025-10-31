@@ -20,6 +20,14 @@ class NotaryResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
+    protected static ?string $navigationLabel = 'الأمناء';
+
+    protected static ?string $modelLabel = 'أمين';
+
+    protected static ?string $pluralModelLabel = 'الأمناء';
+
+    protected static ?string $navigationGroup = 'إدارة النظام';
+
     public static function form(Schema $schema): Schema
     {
         return NotaryForm::configure($schema);

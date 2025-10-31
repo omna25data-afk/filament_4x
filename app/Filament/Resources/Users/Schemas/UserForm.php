@@ -15,29 +15,42 @@ class UserForm
         return $schema
             ->components([
                 TextInput::make('username')
+                    ->label('اسم المستخدم')
                     ->required(),
                 TextInput::make('password')
+                    ->label('كلمة المرور')
                     ->password()
                     ->required(),
                 Select::make('role')
-                    ->options(['admin' => 'Admin', 'notary' => 'Notary', 'assistant_admin' => 'Assistant admin'])
+                    ->label('الدور')
+                    ->options([
+                        'admin' => 'مدير نظام', 
+                        'notary' => 'كاتب عدل', 
+                        'assistant_admin' => 'مساعد مدير'
+                    ])
                     ->default('notary')
                     ->required(),
                 TextInput::make('full_name_ar')
+                    ->label('الاسم الكامل')
                     ->required(),
                 TextInput::make('email')
-                    ->label('Email address')
+                    ->label('البريد الإلكتروني')
                     ->email()
                     ->default(null),
                 TextInput::make('phone_number')
+                    ->label('رقم الهاتف')
                     ->tel()
                     ->default(null),
                 TextInput::make('profile_picture_path')
+                    ->label('مسار الصورة الشخصية')
                     ->default(null),
                 Toggle::make('is_active')
+                    ->label('نشط')
                     ->required(),
-                DateTimePicker::make('last_login_at'),
-                DateTimePicker::make('email_verified_at'),
+                DateTimePicker::make('last_login_at')
+                    ->label('آخر دخول'),
+                DateTimePicker::make('email_verified_at')
+                    ->label('تأكيد البريد'),
             ]);
     }
 }

@@ -20,6 +20,14 @@ class EntryResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
+    protected static ?string $navigationLabel = 'القيود';
+
+    protected static ?string $modelLabel = 'قيد';
+
+    protected static ?string $pluralModelLabel = 'القيود';
+
+    protected static ?string $navigationGroup = 'إدارة السجلات';
+
     public static function form(Schema $schema): Schema
     {
         return EntryForm::configure($schema);

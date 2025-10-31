@@ -20,6 +20,14 @@ class RegisterResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
+    protected static ?string $navigationLabel = 'السجلات';
+
+    protected static ?string $modelLabel = 'سجل';
+
+    protected static ?string $pluralModelLabel = 'السجلات';
+
+    protected static ?string $navigationGroup = 'إدارة السجلات';
+
     public static function form(Schema $schema): Schema
     {
         return RegisterForm::configure($schema);

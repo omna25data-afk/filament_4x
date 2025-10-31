@@ -16,31 +16,41 @@ class UsersTable
         return $table
             ->columns([
                 TextColumn::make('username')
+                    ->label('اسم المستخدم')
                     ->searchable(),
                 TextColumn::make('role')
+                    ->label('الدور')
                     ->badge(),
                 TextColumn::make('full_name_ar')
+                    ->label('الاسم الكامل')
                     ->searchable(),
                 TextColumn::make('email')
-                    ->label('Email address')
+                    ->label('البريد الإلكتروني')
                     ->searchable(),
                 TextColumn::make('phone_number')
+                    ->label('رقم الهاتف')
                     ->searchable(),
                 TextColumn::make('profile_picture_path')
+                    ->label('مسار الصورة الشخصية')
                     ->searchable(),
                 IconColumn::make('is_active')
+                    ->label('نشط')
                     ->boolean(),
                 TextColumn::make('last_login_at')
+                    ->label('آخر دخول')
                     ->dateTime()
                     ->sortable(),
                 TextColumn::make('email_verified_at')
+                    ->label('تأكيد البريد')
                     ->dateTime()
                     ->sortable(),
                 TextColumn::make('created_at')
+                    ->label('تاريخ الإنشاء')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('updated_at')
+                    ->label('تاريخ التحديث')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),

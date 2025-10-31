@@ -20,7 +20,16 @@ class UsersTable
                     ->searchable(),
                 TextColumn::make('role')
                     ->label('الدور')
-                    ->badge(),
+                    ->badge()
+                    ->formatStateUsing(fn (string $state): string => match ($state) {
+                        'admin' => 'رئيس قلم التوثيق',
+                        'notary' => 'الأمين الشرعي',
+                        'assistant_admin' => 'رئيس وحدة الأمناء',
+                        'documentation_writer' => 'كاتب توثيق',
+                        'data_entry' => 'مدخل بيانات',
+                        'treasury_guardian' => 'أمين صندوق',
+                        default => $state,
+                    }),
                 TextColumn::make('full_name_ar')
                     ->label('الاسم الكامل')
                     ->searchable(),

@@ -59,7 +59,7 @@ class AdminPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ])
-            ->brandName('نظام إدارة قلم التوثيق إب')
+            ->brandName('نظام إدارة قلم التوثيق')
             ->navigationGroups([
                 'إدارة النظام',
                 'إدارة العقود',
@@ -69,6 +69,10 @@ class AdminPanelProvider extends PanelProvider
             ->renderHook(
                 'panels::head.end',
                 fn (): string => '<style dir="rtl">html { direction: rtl; }</style>',
+            )
+            ->renderHook(
+                'panels::brand.after',
+                fn (): string => '<div style="text-align: center; font-size: 0.875rem; color: #6b7280; margin-top: 0.5rem;">محكمة السياني إب</div>',
             );
     }
 }

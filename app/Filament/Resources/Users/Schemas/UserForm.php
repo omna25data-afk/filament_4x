@@ -24,9 +24,12 @@ class UserForm
                 Select::make('role')
                     ->label('الدور')
                     ->options([
-                        'admin' => 'مدير نظام', 
-                        'notary' => 'كاتب عدل', 
-                        'assistant_admin' => 'مساعد مدير'
+                        'admin' => 'رئيس قلم التوثيق', 
+                        'notary' => 'الأمين الشرعي', 
+                        'assistant_admin' => 'رئيس وحدة الأمناء',
+                        'documentation_writer' => 'كاتب توثيق',
+                        'data_entry' => 'مدخل بيانات',
+                        'treasury_guardian' => 'أمين صندوق'
                     ])
                     ->default('notary')
                     ->required(),

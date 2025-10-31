@@ -20,6 +20,14 @@ class DivorceAttestationResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
+    protected static ?string $navigationLabel = 'قيود إشهادات الطلاق';
+
+    protected static ?string $modelLabel = 'قيد إشهاد طلاق';
+
+    protected static ?string $pluralModelLabel = 'قيود إشهادات الطلاق';
+
+    protected static ?string $navigationGroup = 'إدارة القيود';
+
     public static function form(Schema $schema): Schema
     {
         return DivorceAttestationForm::configure($schema);

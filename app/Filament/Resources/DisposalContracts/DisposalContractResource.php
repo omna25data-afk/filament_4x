@@ -20,6 +20,14 @@ class DisposalContractResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
+    protected static ?string $navigationLabel = 'قيود محررات التصرفات';
+
+    protected static ?string $modelLabel = 'قيد محرر تصرف';
+
+    protected static ?string $pluralModelLabel = 'قيود محررات التصرفات';
+
+    protected static ?string $navigationGroup = 'إدارة القيود';
+
     public static function form(Schema $schema): Schema
     {
         return DisposalContractForm::configure($schema);

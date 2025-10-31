@@ -20,6 +20,14 @@ class SystemSettingResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
+    protected static ?string $navigationLabel = 'إعدادات النظام';
+
+    protected static ?string $modelLabel = 'إعداد نظام';
+
+    protected static ?string $pluralModelLabel = 'إعدادات النظام';
+
+    protected static ?string $navigationGroup = 'إدارة النظام';
+
     public static function form(Schema $schema): Schema
     {
         return SystemSettingForm::configure($schema);

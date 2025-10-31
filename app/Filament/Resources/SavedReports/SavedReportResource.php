@@ -20,6 +20,14 @@ class SavedReportResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
+    protected static ?string $navigationLabel = 'التقارير المحفوظة';
+
+    protected static ?string $modelLabel = 'تقرير محفوظ';
+
+    protected static ?string $pluralModelLabel = 'التقارير المحفوظة';
+
+    protected static ?string $navigationGroup = 'إدارة التقارير';
+
     public static function form(Schema $schema): Schema
     {
         return SavedReportForm::configure($schema);

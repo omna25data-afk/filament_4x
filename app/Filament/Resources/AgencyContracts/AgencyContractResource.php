@@ -20,6 +20,14 @@ class AgencyContractResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
+    protected static ?string $navigationLabel = 'قيود عقود الوكالات';
+
+    protected static ?string $modelLabel = 'قيد عقد وكالة';
+
+    protected static ?string $pluralModelLabel = 'قيود عقود الوكالات';
+
+    protected static ?string $navigationGroup = 'إدارة القيود';
+
     public static function form(Schema $schema): Schema
     {
         return AgencyContractForm::configure($schema);

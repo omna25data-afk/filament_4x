@@ -20,6 +20,14 @@ class PartitionContractResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
+    protected static ?string $navigationLabel = 'قيود فصول القسمة';
+
+    protected static ?string $modelLabel = 'قيد فصل قسمة';
+
+    protected static ?string $pluralModelLabel = 'قيود فصول القسمة';
+
+    protected static ?string $navigationGroup = 'إدارة القيود';
+
     public static function form(Schema $schema): Schema
     {
         return PartitionContractForm::configure($schema);

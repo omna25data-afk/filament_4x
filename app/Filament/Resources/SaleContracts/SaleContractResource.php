@@ -20,6 +20,14 @@ class SaleContractResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
+    protected static ?string $navigationLabel = 'قيود عقود المبيعات';
+
+    protected static ?string $modelLabel = 'قيد عقد بيع';
+
+    protected static ?string $pluralModelLabel = 'قيود عقود المبيعات';
+
+    protected static ?string $navigationGroup = 'إدارة القيود';
+
     public static function form(Schema $schema): Schema
     {
         return SaleContractForm::configure($schema);

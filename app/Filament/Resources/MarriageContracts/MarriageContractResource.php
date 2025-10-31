@@ -20,13 +20,13 @@ class MarriageContractResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
-    protected static ?string $navigationLabel = 'عقود الزواج';
+    protected static ?string $navigationLabel = 'قيود عقود الزواج';
 
-    protected static ?string $modelLabel = 'عقد زواج';
+    protected static ?string $modelLabel = 'قيد عقد زواج';
 
-    protected static ?string $pluralModelLabel = 'عقود الزواج';
+    protected static ?string $pluralModelLabel = 'قيود عقود الزواج';
 
-    protected static ?string $navigationGroup = 'إدارة العقود';
+    protected static ?string $navigationGroup = 'إدارة القيود';
 
     public static function form(Schema $schema): Schema
     {

@@ -20,6 +20,14 @@ class TaskResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
+    protected static ?string $navigationLabel = 'المهام';
+
+    protected static ?string $modelLabel = 'مهمة';
+
+    protected static ?string $pluralModelLabel = 'المهام';
+
+    protected static ?string $navigationGroup = 'إدارة النظام';
+
     public static function form(Schema $schema): Schema
     {
         return TaskForm::configure($schema);

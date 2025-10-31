@@ -20,6 +20,14 @@ class ReconciliationAttestationResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
+    protected static ?string $navigationLabel = 'قيود إشهادات الرجعة';
+
+    protected static ?string $modelLabel = 'قيد إشهاد رجعة';
+
+    protected static ?string $pluralModelLabel = 'قيود إشهادات الرجعة';
+
+    protected static ?string $navigationGroup = 'إدارة القيود';
+
     public static function form(Schema $schema): Schema
     {
         return ReconciliationAttestationForm::configure($schema);

@@ -59,7 +59,7 @@ class AdminPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ])
-            ->brandName('نظام إدارة العقود')
+            ->brandName('نظام إدارة قلم التوثيق إب')
             ->navigationGroups([
                 'إدارة النظام',
                 'إدارة العقود',

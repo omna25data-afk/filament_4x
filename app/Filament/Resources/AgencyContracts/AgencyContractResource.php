@@ -9,6 +9,7 @@ use App\Filament\Resources\AgencyContracts\Schemas\AgencyContractForm;
 use App\Filament\Resources\AgencyContracts\Tables\AgencyContractsTable;
 use App\Models\AgencyContract;
 use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -26,7 +27,7 @@ class AgencyContractResource extends Resource
 
     protected static ?string $pluralModelLabel = 'قيود عقود الوكالات';
 
-    protected static ?string $navigationGroup = 'إدارة القيود';
+    protected static UnitEnum|string|null $navigationGroup = 'إدارة القيود';
 
     public static function form(Schema $schema): Schema
     {

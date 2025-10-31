@@ -9,6 +9,7 @@ use App\Filament\Resources\DisposalContracts\Schemas\DisposalContractForm;
 use App\Filament\Resources\DisposalContracts\Tables\DisposalContractsTable;
 use App\Models\DisposalContract;
 use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -26,7 +27,7 @@ class DisposalContractResource extends Resource
 
     protected static ?string $pluralModelLabel = 'قيود محررات التصرفات';
 
-    protected static ?string $navigationGroup = 'إدارة القيود';
+    protected static UnitEnum|string|null $navigationGroup = 'إدارة القيود';
 
     public static function form(Schema $schema): Schema
     {

@@ -9,6 +9,7 @@ use App\Filament\Resources\Notaries\Schemas\NotaryForm;
 use App\Filament\Resources\Notaries\Tables\NotariesTable;
 use App\Models\Notary;
 use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -26,7 +27,7 @@ class NotaryResource extends Resource
 
     protected static ?string $pluralModelLabel = 'الأمناء';
 
-    protected static ?string $navigationGroup = 'إدارة النظام';
+    protected static UnitEnum|string|null $navigationGroup = 'إدارة النظام';
 
     public static function form(Schema $schema): Schema
     {

@@ -9,6 +9,7 @@ use App\Filament\Resources\Registers\Schemas\RegisterForm;
 use App\Filament\Resources\Registers\Tables\RegistersTable;
 use App\Models\Register;
 use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -26,7 +27,7 @@ class RegisterResource extends Resource
 
     protected static ?string $pluralModelLabel = 'السجلات';
 
-    protected static ?string $navigationGroup = 'إدارة السجلات';
+    protected static UnitEnum|string|null $navigationGroup = 'إدارة السجلات';
 
     public static function form(Schema $schema): Schema
     {

@@ -9,6 +9,7 @@ use App\Filament\Resources\DivorceAttestations\Schemas\DivorceAttestationForm;
 use App\Filament\Resources\DivorceAttestations\Tables\DivorceAttestationsTable;
 use App\Models\DivorceAttestation;
 use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -26,7 +27,7 @@ class DivorceAttestationResource extends Resource
 
     protected static ?string $pluralModelLabel = 'قيود إشهادات الطلاق';
 
-    protected static ?string $navigationGroup = 'إدارة القيود';
+    protected static UnitEnum|string|null $navigationGroup = 'إدارة القيود';
 
     public static function form(Schema $schema): Schema
     {

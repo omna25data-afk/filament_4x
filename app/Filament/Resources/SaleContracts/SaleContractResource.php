@@ -9,6 +9,7 @@ use App\Filament\Resources\SaleContracts\Schemas\SaleContractForm;
 use App\Filament\Resources\SaleContracts\Tables\SaleContractsTable;
 use App\Models\SaleContract;
 use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -26,7 +27,7 @@ class SaleContractResource extends Resource
 
     protected static ?string $pluralModelLabel = 'قيود عقود المبيعات';
 
-    protected static ?string $navigationGroup = 'إدارة القيود';
+    protected static UnitEnum|string|null $navigationGroup = 'إدارة القيود';
 
     public static function form(Schema $schema): Schema
     {

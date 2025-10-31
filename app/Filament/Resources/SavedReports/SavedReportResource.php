@@ -8,12 +8,13 @@ use App\Filament\Resources\SavedReports\Pages\ListSavedReports;
 use App\Filament\Resources\SavedReports\Schemas\SavedReportForm;
 use App\Filament\Resources\SavedReports\Tables\SavedReportsTable;
 use App\Models\SavedReport;
-use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 
+use BackedEnum;
 class SavedReportResource extends Resource
 {
     protected static ?string $model = SavedReport::class;
@@ -26,7 +27,7 @@ class SavedReportResource extends Resource
 
     protected static ?string $pluralModelLabel = 'التقارير المحفوظة';
 
-    protected static ?string $navigationGroup = 'إدارة التقارير';
+    protected static UnitEnum|string|null $navigationGroup = 'إدارة التقارير';
 
     public static function form(Schema $schema): Schema
     {

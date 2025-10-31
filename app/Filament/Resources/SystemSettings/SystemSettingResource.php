@@ -8,12 +8,13 @@ use App\Filament\Resources\SystemSettings\Pages\ListSystemSettings;
 use App\Filament\Resources\SystemSettings\Schemas\SystemSettingForm;
 use App\Filament\Resources\SystemSettings\Tables\SystemSettingsTable;
 use App\Models\SystemSetting;
-use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 
+use BackedEnum;
 class SystemSettingResource extends Resource
 {
     protected static ?string $model = SystemSetting::class;
@@ -26,7 +27,7 @@ class SystemSettingResource extends Resource
 
     protected static ?string $pluralModelLabel = 'إعدادات النظام';
 
-    protected static ?string $navigationGroup = 'إدارة النظام';
+    protected static UnitEnum|string|null $navigationGroup = 'إدارة النظام';
 
     public static function form(Schema $schema): Schema
     {

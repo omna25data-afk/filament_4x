@@ -9,6 +9,7 @@ use App\Filament\Resources\MarriageContracts\Schemas\MarriageContractForm;
 use App\Filament\Resources\MarriageContracts\Tables\MarriageContractsTable;
 use App\Models\MarriageContract;
 use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -26,7 +27,7 @@ class MarriageContractResource extends Resource
 
     protected static ?string $pluralModelLabel = 'قيود عقود الزواج';
 
-    protected static ?string $navigationGroup = 'إدارة القيود';
+    protected static UnitEnum|string|null $navigationGroup = 'إدارة القيود';
 
     public static function form(Schema $schema): Schema
     {

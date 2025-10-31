@@ -9,6 +9,7 @@ use App\Filament\Resources\ReconciliationAttestations\Schemas\ReconciliationAtte
 use App\Filament\Resources\ReconciliationAttestations\Tables\ReconciliationAttestationsTable;
 use App\Models\ReconciliationAttestation;
 use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -26,7 +27,7 @@ class ReconciliationAttestationResource extends Resource
 
     protected static ?string $pluralModelLabel = 'قيود إشهادات الرجعة';
 
-    protected static ?string $navigationGroup = 'إدارة القيود';
+    protected static UnitEnum|string|null $navigationGroup = 'إدارة القيود';
 
     public static function form(Schema $schema): Schema
     {

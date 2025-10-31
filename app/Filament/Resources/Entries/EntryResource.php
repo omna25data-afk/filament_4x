@@ -9,6 +9,7 @@ use App\Filament\Resources\Entries\Schemas\EntryForm;
 use App\Filament\Resources\Entries\Tables\EntriesTable;
 use App\Models\Entry;
 use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -26,7 +27,7 @@ class EntryResource extends Resource
 
     protected static ?string $pluralModelLabel = 'القيود';
 
-    protected static ?string $navigationGroup = 'إدارة السجلات';
+    protected static UnitEnum|string|null $navigationGroup = 'إدارة السجلات';
 
     public static function form(Schema $schema): Schema
     {

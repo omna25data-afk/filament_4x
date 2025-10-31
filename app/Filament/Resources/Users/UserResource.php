@@ -8,12 +8,13 @@ use App\Filament\Resources\Users\Pages\ListUsers;
 use App\Filament\Resources\Users\Schemas\UserForm;
 use App\Filament\Resources\Users\Tables\UsersTable;
 use App\Models\User;
-use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 
+use BackedEnum;
 class UserResource extends Resource
 {
     protected static ?string $model = User::class;
@@ -26,7 +27,7 @@ class UserResource extends Resource
 
     protected static ?string $pluralModelLabel = 'المستخدمون';
 
-    protected static ?string $navigationGroup = 'إدارة النظام';
+    protected static UnitEnum|string|null $navigationGroup = 'إدارة النظام';
 
     public static function form(Schema $schema): Schema
     {

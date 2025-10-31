@@ -4,14 +4,14 @@ namespace App\Filament\Resources\AgencyContracts\Schemas;
 
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
-use Filament\Schemas\Schema;
+use Filament\Forms\Form;
 
 class AgencyContractForm
 {
-    public static function configure(Schema $schema): Schema
+    public static function configure(Form $form): Form
     {
-        return $schema
-            ->components([
+        return $form
+            ->schema([
                 TextInput::make('entry_id')
                     ->required()
                     ->numeric(),

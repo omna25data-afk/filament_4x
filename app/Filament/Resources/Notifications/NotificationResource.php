@@ -9,6 +9,7 @@ use App\Filament\Resources\Notifications\Schemas\NotificationForm;
 use App\Filament\Resources\Notifications\Tables\NotificationsTable;
 use App\Models\Notification;
 use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -26,7 +27,7 @@ class NotificationResource extends Resource
 
     protected static ?string $pluralModelLabel = 'الإشعارات';
 
-    protected static ?string $navigationGroup = 'إدارة النظام';
+    protected static UnitEnum|string|null $navigationGroup = 'إدارة النظام';
 
     public static function form(Schema $schema): Schema
     {

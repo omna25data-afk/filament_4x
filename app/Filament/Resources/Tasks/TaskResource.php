@@ -8,12 +8,13 @@ use App\Filament\Resources\Tasks\Pages\ListTasks;
 use App\Filament\Resources\Tasks\Schemas\TaskForm;
 use App\Filament\Resources\Tasks\Tables\TasksTable;
 use App\Models\Task;
-use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 
+use BackedEnum;
 class TaskResource extends Resource
 {
     protected static ?string $model = Task::class;
@@ -26,7 +27,7 @@ class TaskResource extends Resource
 
     protected static ?string $pluralModelLabel = 'المهام';
 
-    protected static ?string $navigationGroup = 'إدارة النظام';
+    protected static UnitEnum|string|null $navigationGroup = 'إدارة النظام';
 
     public static function form(Schema $schema): Schema
     {
